@@ -1,221 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería de Trabajos</title>
-    <style>
-        /* Reset de estilos */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paty Escobar Studio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: aliceblue;
+    }
+    .text-container {
+    max-width: 500px;
+}
 
-        /* Estilos generales */
-        body {
-            background-color: black;
-            color: white;
-            text-align: center;
-        }
+.text-container h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
 
-        /* Encabezado con imagen de fondo */
-        .header {
-            position: relative;
-            width: 100%;
-            height: 300px;
-            background: url('encabezado.jpg') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+.text-container p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+    .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    }
+    .menu-flotante {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100px;
+      height: 50%;
+      background-color: #e83c3c;
+      color: rgb(255, 255, 255);
+      padding: 20px;
+    }
 
-        .header h1 {
-            font-size: 50px;
-            font-weight: bold;
-        }
+    .menu-flotante ul {
+      list-style-type: none;
+      padding: 0;
+    }
 
-        .arrow {
-            position: absolute;
-            bottom: 20px;
-            font-size: 30px;
-        }
+    .menu-flotante ul li {
+      margin: 20px 0;
+    }
 
-        /* Contenedor de galería */
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
+    .menu-flotante ul li a {
+      color: white;
+      text-decoration: none;
+    }
 
-        .gallery-item {
-            width: 48%;
-            margin: 1%;
-            background-color: #222;
-            padding: 10px;
-            border-radius: 10px;
-        }
+    .menu-flotante ul li a:hover {
+      text-decoration: underline;
+    }
 
-        .gallery img {
-            width: 100%;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
+    .contenido {
+      margin-left: 220px;
+      padding: 20px;
+    }
+    .gallery {
+    position: absolute; 
+    top: 10px;  
+    right: 10px;
+    width: 100px; 
+    height: auto;
+}
 
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Caja de comentarios */
-        .comment-box {
-            margin-top: 10px;
-        }
-
-        .comment-box textarea {
-            width: 100%;
-            padding: 8px;
-            border-radius: 5px;
-            border: none;
-            resize: none;
-        }
-
-        .comment-box button {
-            margin-top: 5px;
-            padding: 5px 10px;
-            border: none;
-            background-color: #ff9900;
-            color: black;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .comment-box button:hover {
-            background-color: #cc7a00;
-        }
-
-        /* Lista de comentarios */
-        .comment-list {
-            text-align: left;
-            margin-top: 10px;
-        }
-
-        .comment {
-            background: #333;
-            padding: 5px;
-            border-radius: 5px;
-            margin-top: 5px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 36px;
-            }
-
-            .gallery-item {
-                width: 98%;
-            }
-        }
-    </style>
+  </style>
 </head>
 <body>
+  <center>
+    <div class="logo"><img src="logo.jpg" alt="logo" width="200" height="100"></div>
+<div class="menu-flotante">
+  <h2>Menú</h2>
+  <ul>
+    <li><a href="galeria.html">Galeria de trabajo</a></li>
+    <li><a href="agenda.html">Agenda 2025</a></li>
+    <li><a href="redessoc.html">Redes sociales</a></li>
+  </ul>
+</div>
 
-    <!-- Sección del encabezado -->
-    <div class="header">
-        <h1>Galería de Trabajos</h1>
-        <div class="arrow">⬇</div>
-    </div>
-
-    <!-- Sección de la galería -->
-    <div class="gallery">
-        <div class="gallery-item" data-id="1">
-            <img src="tattoo1.jpg" alt="Tatuaje 1">
-            <div class="comment-box">
-                <textarea placeholder="Escribe un comentario..." class="comment-input"></textarea>
-                <button onclick="addComment(1)">Comentar</button>
-            </div>
-            <div class="comment-list" id="comments-1"></div>
-        </div>
-
-        <div class="gallery-item" data-id="2">
-            <img src="tattoo2.jpg" alt="Tatuaje 2">
-            <div class="comment-box">
-                <textarea placeholder="Escribe un comentario..." class="comment-input"></textarea>
-                <button onclick="addComment(2)">Comentar</button>
-            </div>
-            <div class="comment-list" id="comments-2"></div>
-        </div>
-
-        <div class="gallery-item" data-id="3">
-            <img src="tattoo3.jpg" alt="Tatuaje 3">
-            <div class="comment-box">
-                <textarea placeholder="Escribe un comentario..." class="comment-input"></textarea>
-                <button onclick="addComment(3)">Comentar</button>
-            </div>
-            <div class="comment-list" id="comments-3"></div>
-        </div>
-
-        <div class="gallery-item" data-id="4">
-            <img src="tattoo4.jpg" alt="Tatuaje 4">
-            <div class="comment-box">
-                <textarea placeholder="Escribe un comentario..." class="comment-input"></textarea>
-                <button onclick="addComment(4)">Comentar</button>
-            </div>
-            <div class="comment-list" id="comments-4"></div>
-        </div>
-    </div>
-
-    <script>
-        // Cargar comentarios al iniciar la página
-        document.addEventListener("DOMContentLoaded", function() {
-            loadComments();
-        });
-
-        function addComment(imageId) {
-            let commentInput = document.querySelector(`.gallery-item[data-id="${imageId}"] .comment-input`);
-            let commentText = commentInput.value.trim();
-
-            if (commentText === "") {
-                alert("Por favor, escribe un comentario.");
-                return;
-            }
-
-            // Obtener comentarios guardados o inicializar una lista vacía
-            let comments = JSON.parse(localStorage.getItem(`comments-${imageId}`)) || [];
-            comments.push(commentText);
-
-            // Guardar en localStorage
-            localStorage.setItem(`comments-${imageId}`, JSON.stringify(comments));
-
-            // Limpiar el textarea
-            commentInput.value = "";
-
-            // Recargar los comentarios
-            loadComments();
-        }
-
-        function loadComments() {
-            document.querySelectorAll(".gallery-item").forEach(item => {
-                let imageId = item.getAttribute("data-id");
-                let commentsContainer = document.getElementById(`comments-${imageId}`);
-                commentsContainer.innerHTML = "";
-
-                // Obtener comentarios de localStorage
-                let comments = JSON.parse(localStorage.getItem(`comments-${imageId}`)) || [];
-
-                // Mostrar cada comentario
-                comments.forEach(comment => {
-                    let commentElement = document.createElement("div");
-                    commentElement.classList.add("comment");
-                    commentElement.innerText = comment;
-                    commentsContainer.appendChild(commentElement);
-                });
-            });
-        }
-    </script>
+<div class="text-container">
+  <h1>Los tatuajes son historias eternas en la piel. </h1>
+  <p>Se que cada tatuaje es tan único como la persona que lo lleva. Por eso, como artista me tomo el tiempo de conocer a cada cliente y comprender sus ideas e inspiraciones.
+   Me especializo en tatuajes personalizados en una variedad de estilos, desde tradicionales hasta contemporáneos. 
+   Como artista soy experta en la creación de diseños detallados y en el uso de las últimas técnicas para garantizar que cada tatuaje sea tan hermoso como personal.
+  </p>
+</div>
+<div class="gallery">
+  <img src="tattoo2.jpg" alt="Tatuaje 1" width="200" height="250">
 
 </body>
 </html>
