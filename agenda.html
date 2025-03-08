@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda 2024/2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+        .container {
+            width: 60%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        input, textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AGENDA 2024/2025</h1>
+        <p>Gracias por tu interés en mi trabajo. Por favor, completa el siguiente formulario con toda la información requerida y te respondere en un plazo de 24 horas. Si necesitas una respuesta más rápida, escríbenos por WhatsApp. ¡Gracias!</p>
+    
+        <form action="procesar_formulario.php" method="POST">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" required>
+    
+            <label for="correo">Correo *</label>
+            <input type="email" id="correo" name="correo" required>
+    
+            <label for="telefono">Teléfono o WhatsApp *</label>
+            <input type="tel" id="telefono" name="telefono" required>
+    
+            <label for="ciudad">Ciudad de donde nos visitas *</label>
+            <input type="text" id="ciudad" name="ciudad" required>
+    
+            <label for="viaje">¿Vienes de viaje? ¿Cuáles son tus fechas?</label>
+            <textarea id="viaje" name="viaje" rows="3"></textarea>
+
+            <h2>*Una descripción del procedimiento*</h2>
+            <textarea name="descripcion" rows="4" placeholder="Por favor incluir tamaño, lugar, estilo, detalles extras" required></textarea><br><br>
+    
+            <h3>*Tatuaje: Hasta 3 fotos de referencia, por favor*</h3>
+            <input type="file" name="fotos_tatuaje[]" multiple accept="image/*"><br><br>
+    
+            <p>¡Gracias! <br> ¡Estare respondiendote en breve! <br> ¡Ten un excelente día!</p>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    
+    </body>
+    </html>
+    
+</body>
+</html>
