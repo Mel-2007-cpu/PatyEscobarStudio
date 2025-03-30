@@ -1,100 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paty Escobar Studio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: black;
-      color: aliceblue;
-    }
-    .text-container {
-    max-width: 500px;
-}
-
-.text-container h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.text-container p {
-    font-size: 18px;
-    line-height: 1.5;
-}
-    .logo {
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
-    }
-    .menu-flotante {
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: 100px;
-      height: 50%;
-      background-color: #e83c3c;
-      color: rgb(255, 255, 255);
-      padding: 20px;
-    }
-
-    .menu-flotante ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .menu-flotante ul li {
-      margin: 20px 0;
-    }
-
-    .menu-flotante ul li a {
-      color: white;
-      text-decoration: none;
-    }
-
-    .menu-flotante ul li a:hover {
-      text-decoration: underline;
-    }
-
-    .contenido {
-      margin-left: 220px;
-      padding: 20px;
-    }
-    .gallery {
-    position: absolute; 
-    top: 10px;  
-    right: 10px;
-    width: 100px; 
-    height: auto;
-}
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patty Escobar Tattoos</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('tatto3.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #f0c040;
+        }
+        .content {
+            text-align: center;
+            padding-top: 150px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 4em;
+            text-shadow: 2px 2px 5px #000;
+        }
+        p {
+            font-size: 1.2em;
+            text-shadow: 1px 1px 3px #000;
+        }
+        .button {
+            background-color: #f0c040;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #000;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #d19a2b;
+        }
+    </style>
 </head>
 <body>
-  <center>
-    <div class="logo"><img src="logo.jpg" alt="logo" width="200" height="100"></div>
-<div class="menu-flotante">
-  <h2>Menú</h2>
-  <ul>
-    <li><a href="galeria.html">Galeria de trabajo</a></li>
-    <li><a href="agenda.html">Agenda 2025</a></li>
-    <li><a href="redessoc.html">Redes sociales</a></li>
-    <li><a href="acercadelosdesarr.html">Acerca de los desarrolladores</a></li>
-  </ul>
-</div>
-
-<div class="text-container">
-  <h1>Los tatuajes son historias eternas en la piel. </h1>
-  <p>Se que cada tatuaje es tan único como la persona que lo lleva. Por eso, como artista me tomo el tiempo de conocer a cada cliente y comprender sus ideas e inspiraciones.
-   Me especializo en tatuajes personalizados en una variedad de estilos, desde tradicionales hasta contemporáneos. 
-   Como artista soy experta en la creación de diseños detallados y en el uso de las últimas técnicas para garantizar que cada tatuaje sea tan hermoso como personal.
-  </p>
-</div>
-<div class="gallery">
-  <img src="tattoo2.jpg" alt="Tatuaje 1" width="200" height="250">
-
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#sobre-mi">Sobre mí</a>
+    </nav>
+    <div class="content">
+        <h1>Patty Escobar Tattoos</h1>
+        <p>Historias eternas en la piel</p>
+    </div>
 </body>
 </html>
